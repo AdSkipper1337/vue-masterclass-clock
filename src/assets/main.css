@@ -1,0 +1,19 @@
+@import "./reset.css";
+
+.mc-clock-hand-hours {
+  width: 500%;
+  transform: translate(-42%, -42%) rotate(180deg);
+  pointer-events: none;
+}
+
+.mc-clock-hand-minutes {
+  width: 650%;
+  transform: translate(-42%, -40%) rotate(180deg);
+  pointer-events: none;
+}
+
+.mc-clock-hand-seconds {
+  width: 1100%;
+  transform: translate(-46%, -53%) rotate(180deg);
+  pointer-events: none;
+}
