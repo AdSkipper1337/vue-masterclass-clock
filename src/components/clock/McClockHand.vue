@@ -51,6 +51,8 @@ function mouseDrag(event) {
 }
 
 function touchDrag(event) {
+    event.preventDefault();
+    event.stopPropagation();
   mouseDrag(event.changedTouches[0]);
 }
 
@@ -98,6 +100,7 @@ onBeforeUnmount(() => {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  touch-action: none;
 }
 
 .mc-clock-hand-tip {
@@ -111,7 +114,7 @@ onBeforeUnmount(() => {
   box-sizing: border-box;
   cursor: pointer;
   opacity: 0;
-  filter: blur(5vw);
+  filter: blur(2vw);
 }
 
 .mc-clock-hand-tip-shining,
