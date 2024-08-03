@@ -21,8 +21,15 @@ const props = defineProps({
   top: 50%;
   left: 50%;
   transform-origin: bottom center;
-  transform: translate(-50%, -100%) rotate(calc(v-bind(digit) * 30deg)) translate(0%, -100%);
+  transform: translate(-50%, -100%) rotate(calc(v-bind(digit) * 30deg))
+    translate(0%, -100%);
   background-color: black;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .mc-clock-digit-container {
@@ -33,15 +40,21 @@ const props = defineProps({
   left: 50%;
   transform-origin: bottom center;
   transform: translate(-50%, -100%) rotate(calc(v-bind(digit) * 30deg));
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .mc-clock-digit {
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 7.6vw;
-  width: 10vw;
-  height: 10vw;
-  line-height: 10vw;
+  font-size: calc(min(7.6vw, 7.6vh));
+  width: calc(min(10vw, 10vh));
+  height: calc(min(10vw, 10vh));
+  line-height: calc(min(10vw, 10vh));
   text-align: center;
   background-color: darkgrey;
   border-radius: 50%;

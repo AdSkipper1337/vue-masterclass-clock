@@ -3,5 +3,13 @@ import McClock from './components/clock/McClock.vue'
 </script>
 
 <template>
-    <McClock></McClock>
+    <div class="app-wrapper">
+        <McClock></McClock>
+    </div>
 </template>
+
+<style>
+.app-wrapper {
+    max-width: 90vh;
+}
+</style>
